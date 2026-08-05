@@ -10,8 +10,7 @@ def display_header():
     st.title("🤖 Amsterdam Gemeente Chatbot")
     st.markdown("Ask me anything about Amsterdam gemeente policies! I can answer questions using my internal knowledge (RAG) or by searching the web.")
     disclaimer= """
-    >[!NOTE]
-    >The contents, information, and answers provided through this chatbot are for testing purposes only. 
+    The contents, information, and answers provided through this chatbot are for testing purposes only. 
     They represent neither the views nor the official position of Amsterdam Gemeente. 
     The Amsterdam Gemeente was not involved nor consulted during the development and deployment of this chatbot, 
     hence they should not be held responsible for its content or its use. 
