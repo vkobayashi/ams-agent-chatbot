@@ -2,8 +2,12 @@
 
 ---
 
-This repository contains the code for a sophisticated AI Agent application capable of answering user queries about amsterdam rules and policies by intelligently leveraging both a private, custom knowledge base (using Retrieval-Augmented Generation - RAG) and real-time web search. Users have granular control over the web search feature, enhancing flexibility and transparency.
+This repository contains the code for a sophisticaed AI Agent application capable of answering user queries by intelligently leveraging both a private, custome knowledge base (using RAG) and real-time web search. Users have granular control over the web search feature, enhancing flexibility and transparency.
+
 ---
+
+[!NOTE]
+The contents, information, and answers provided through this chatbot are for testing purposes only. They represent neither the views nor the official position of Amsterdam Gemeente. The Amsterdam Gemeente was not involved nor consulted during the development and deployment of this chatbot, hence they should not be held responsible for its content or its use. For questions and queries kindly email the developer.
 
 ## ✨ Key Features
 
@@ -52,36 +56,6 @@ This repository contains the code for a sophisticated AI Agent application capab
 ---
 ## 🛠️ Setup and Installation
 
-### Prerequisites
-
-- Python 3.9+
-- API Keys:
-
-  - `GROQ_API_KEY`
-  - `PINECONE_API_KEY`
-  - `TAVILY_API_KEY`
-
-- Pinecone index: `rag-index` with 384 dimensions and cosine metric
-
-### Installation
-
-```bash
-git clone https://github.com/vkobayashi/ams-agent-chatbot.git
-cd ams-agent-chatbot
-uv venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-uv pip install -r requirements.txt
-```
-
-Create a `.env` file at project root:
-
-```dotenv
-ANTHROPIC_API_KEY="your_groq_api_key_here"
-PINECONE_API_KEY="your_pinecone_api_key_here"
-PINECONE_ENVIRONMENT="your_pinecone_environment"
-TAVILY_API_KEY="your_tavily_api_key"
-FASTAPI_BASE_URL="http://localhost:8000"
-```
 
 ---
 
