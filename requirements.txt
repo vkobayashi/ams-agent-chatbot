@@ -16,5 +16,5 @@ langchain-pinecone
 langchain-litellm
 langchain-tavily
 requests
-uvid
+uuid
 langchain-huggingface
