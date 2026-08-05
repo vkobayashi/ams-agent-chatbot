@@ -2,12 +2,12 @@
 
 ---
 
-This repository contains the code for a sophisticaed AI Agent application capable of answering user queries by intelligently leveraging both a private, custome knowledge base (using RAG) and real-time web search. Users have granular control over the web search feature, enhancing flexibility and transparency.
+This repository contains the code for a sophisticaed AI Agent application capable of answering user queries about Amsterdam by intelligently leveraging both a private, custome knowledge base (using RAG) and real-time web search. Users have granular control over the web search feature, enhancing flexibility and transparency.
 
 ---
 
-[!NOTE]
-The contents, information, and answers provided through this chatbot are for testing purposes only. They represent neither the views nor the official position of Amsterdam Gemeente. The Amsterdam Gemeente was not involved nor consulted during the development and deployment of this chatbot, hence they should not be held responsible for its content or its use. For questions and queries kindly email the developer.
+>[!NOTE]
+>The contents, information, and answers provided through this chatbot are for testing purposes only. They represent neither the views nor the official position of Amsterdam Gemeente. The Amsterdam Gemeente was not involved nor consulted during the development and deployment of this chatbot, hence they should not be held responsible for its content or its use. For questions and queries kindly email the developer.
 
 ## ✨ Key Features
 
