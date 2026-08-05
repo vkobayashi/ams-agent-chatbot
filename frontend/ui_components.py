@@ -9,12 +9,17 @@ def display_header():
     st.set_page_config(page_title="Amsterdam Gemeente Chatbot Prototype", layout="wide") # Set page config here
     st.title("🤖 Amsterdam Gemeente Chatbot")
     st.markdown("Ask me anything about Amsterdam gemeente policies! I can answer questions using my internal knowledge (RAG) or by searching the web.")
-    st.markdown(">[!NOTE]" \
-    ">The contents, information, and answers provided through this chatbot are for testing purposes only." \
-    "\n They represent neither the views nor the official position of Amsterdam Gemeente. " \
-    "\n The Amsterdam Gemeente was not involved nor consulted during the development and deployment of this chatbot, " \
-    "\n hence they should not be held responsible for its content or its use. " \
-    "\n For questions and queries about this chatbot kindly email the developer: Vladimer Kobayashi.")
+    disclaimer= """
+    >[!NOTE]
+    >The contents, information, and answers provided through this chatbot are for testing purposes only. 
+    They represent neither the views nor the official position of Amsterdam Gemeente. 
+    The Amsterdam Gemeente was not involved nor consulted during the development and deployment of this chatbot, 
+    hence they should not be held responsible for its content or its use. 
+    For questions and queries about this chatbot kindly email the developer: Vladimer Kobayashi.
+    
+    """
+
+    st.markdown(disclaimer)
     st.markdown("---")
 
 def render_document_upload_section(fastapi_base_url: str):
