@@ -37,7 +37,7 @@ class TraceEvent(BaseModel):
 class QueryRequest(BaseModel):
     session_id: str
     query: str
-    enable_web_search: bool = True # NEW: Add web search toggle state
+    enable_web_search: bool = False # NEW: Add web search toggle state
 
 class AgentResponse(BaseModel):
     response: str

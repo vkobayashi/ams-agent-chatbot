@@ -17,7 +17,7 @@ embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-
 INDEX_NAME = "rag-index"
 # retriever function
 def get_retriever():
-    """Initializes and returns the Pinecone vecyor store retriever"""
+    """Initializes and returns the Pinecone vector store retriever"""
     # ensure the index exists, create if not
     if INDEX_NAME not in pc.list_indexes().names():
         print(f"Creating new index: {INDEX_NAME}...")

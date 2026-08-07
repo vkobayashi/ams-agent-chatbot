@@ -66,9 +66,9 @@ class RagJudge(BaseModel):
 os.environ["ANTHROPIC_API_KEY"] = ANTHROPIC_API_KEY
 
 # replace with gpt-5.4-nano
-router_llm =ChatLiteLLM(model_name="anthropic/claude-sonnet-4-5-20250929",temperature=0.1).with_structured_output(RouteDecision)
-judge_llm =ChatLiteLLM(model_name="anthropic/claude-sonnet-4-5-20250929",temperature=0.1).with_structured_output(RagJudge)
-answer_llm =ChatLiteLLM(model_name="anthropic/claude-sonnet-4-5-20250929",temperature=0.7)
+router_llm =ChatLiteLLM(model_name="anthropic/claude-sonnet-4-5-20250929",temperature=0.3).with_structured_output(RouteDecision)
+judge_llm =ChatLiteLLM(model_name="anthropic/claude-sonnet-4-5-20250929",temperature=0.3).with_structured_output(RagJudge)
+answer_llm =ChatLiteLLM(model_name="anthropic/claude-sonnet-4-5-20250929",temperature=0.1)
 
 
 # State : Shared Data Structure
@@ -92,9 +92,9 @@ def router_node(state:AgentState,config : RunnableConfig)->AgentState:
     system_prompt = (
         "You are an intelligent routing agent designed to direct user queries to the most appropriate tool."
         "Your primary goal is to provide accurate and relevant information by selecting the best source."
-        "Prioritize using the **internal knowledge base (RAG)** for factual information that is likely "
+        "Prioritize using the **internal knowledge base (RAG)** for information that is likely "
         "to be contained within pre-uploaded documents or for common, well-established facts."
-        "Always answer in the context of the city /gemeente of Amsterdam"
+        "Always answer in the context of the city of Amsterdam"
 
     )
 
@@ -102,13 +102,13 @@ def router_node(state:AgentState,config : RunnableConfig)->AgentState:
         system_prompt += (
             "You **CAN** use web search for queries that require very current, real-time, or broad general "
             "knowledge "
-            "that is unlikely to be in a specific , static knowledge base (e.g., website of amsterdam gemeente). "
-            "Always respond in the context of the city /gemeente of Amsterdam."
+            "that is unlikely to be in a specific , static knowledge base. "
+            "Always respond in the context of the city of Amsterdam."
             "\n\nChoose one of the following routes:"
             "\n- 'rag': For queries about specific entities, historical facts, policy details, procedures, or any"
-            "information that would typically be found in a curated document collection (e.g., 'What is X?','How does Y work?','Explain Z policy')."
+            "information that would typically be found in a curated document collection (e.g., 'What is the policy on X?','How does Y work?','Explain Z policy')."
             "\n- 'web': For queries about current events, live data, very recent information, or broad general knowledge that require "
-            "up-to-date internet access (e.g., 'Who won in the last election?','What is the latest news on topic X?','Latest policy on sustainability'). "
+            "up-to-date internet access (e.g., 'Who won in the last election?','What is the latest news on topic X?','Latest coalition agreement'). "
             "use this website as the main source https://www.amsterdam.nl/en/policy/"
         )
 
